@@ -12,3 +12,13 @@ class Solution {
 }
 
 // https://leetcode.com/problems/shuffle-the-array/
+/* https://www.youtube.com/watch?v=hpg65ugGG3E
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        int[] res = new int[2 * n];
+        for(int i = 0; i < nums.length; i++)
+            res[i] = i % 2 == 0 ? nums[i/2] : nums[n + i/2];
+        return res;
+    }
+}
+*/
