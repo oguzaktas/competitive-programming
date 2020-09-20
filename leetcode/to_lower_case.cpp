@@ -1,0 +1,12 @@
+class Solution {
+public:
+    string toLowerCase(string str) {
+        string result;
+        for (int i = 0; i < str.length(); i++) {
+            result += tolower(str[i]);
+        }
+        return result;
+    }
+};
+
+// https://leetcode.com/problems/to-lower-case/
