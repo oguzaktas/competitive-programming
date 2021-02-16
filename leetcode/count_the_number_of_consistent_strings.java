@@ -23,22 +23,20 @@ class Solution {
 /*
 class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
-        int[] freq = new int[26];
+        int[] alpha = new int[26];
         for (int i = 0; i < allowed.length(); i++) {
-            freq[allowed.charAt(i) - 'a']++;
+            char ch = allowed.charAt(i);
+            alpha[ch - 'a']++;
         }
         int count = 0;
-        boolean isAllowed = true;
-        for (int i = 0; i < words.length; i++) {
-            isAllowed = true;
-            for (int j = 0; j < words[i].length(); j++) {
-                if (freq[words[i].charAt(j) - 'a'] == 0) {
-                    isAllowed = false;
-                    break;
+        T: for (String word : words) {
+            for (int i = 0; i < word.length(); i++) {
+                char ch = word.charAt(i);
+                if (alpha[ch - 'a'] <= 0) {
+                    continue T;
                 }
             }
-            if (isAllowed)
-                couny++;
+            count++;
         }
         return count;
     }

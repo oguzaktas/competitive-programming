@@ -1,11 +1,11 @@
 class Solution {
-    public int[] sortedSquares(int[] A) {
-        int[] sortedArray = new int[A.length];
-        for (int i = 0; i < A.length; i++) {
-            sortedArray[i] = A[i] * A[i];
+    public int[] sortedSquares(int[] nums) {
+        int[] squares = Arrays.copyOf(nums, nums.length);
+        for (int i = 0; i < squares.length; i++) {
+            squares[i] *= squares[i];
         }
-        Arrays.sort(sortedArray);
-        return sortedArray;
+        Arrays.sort(squares);
+        return squares;
     }
 }
 
