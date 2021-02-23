@@ -2,6 +2,7 @@
 // array using extra memory space
 #include <bits/stdc++.h>
 using namespace std;
+
 void print(char a[], int n, int ind)
 {
     // Create an auxiliary array of twice size.
